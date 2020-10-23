@@ -10,6 +10,8 @@ export const commentsSlice = createSlice({
     // not sure if I was supposed to do use this for the API as it only returned
     // 5 results and the limit is 10 but with the current API I think setComments makes
     // more sense as I assume I get all of the comments from the post in one go (no param for page)
+    // TLDR: If you want to see new comments being added to the list
+    // replace line 21 with the contents of addComments the list will get "new" data
     addComments: (state, action) => {
         action.payload.forEach(comment => {
             state.comments.push(comment);

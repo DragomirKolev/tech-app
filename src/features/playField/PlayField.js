@@ -15,12 +15,12 @@ export const PlayField = () => {
     const isMaxReached = useSelector(selectIsMaxReached);
 
     const isSelected = number => selectedNumbers.includes(number);
-    const onButtonClick = number => dispatch(isSelected(number) ? filter(number) : push(number));
+    const handleButtonClick = number => dispatch(isSelected(number) ? filter(number) : push(number));
 
     return (
         <GameBoard 
             size={80} 
-            onClick={onButtonClick}
+            handleButtonClick={handleButtonClick}
             isButtonSelected={isSelected}
             selectedNumbers={selectedNumbers}
             isMaxReached={isMaxReached} 

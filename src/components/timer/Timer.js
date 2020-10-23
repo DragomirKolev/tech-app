@@ -7,7 +7,7 @@ const Timer = ({ startingFrom, timerFunction, label }) => {
         const id = setInterval(() => {
              setSeconds(seconds => { 
                     const isTimerDone = (seconds - 1) === 0;
-                    // if (isTimerDone) timerFunction(); 
+                    if (isTimerDone) timerFunction(); 
                     return isTimerDone ? startingFrom : seconds - 1;
                 }
             );

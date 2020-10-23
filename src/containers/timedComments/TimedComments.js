@@ -29,7 +29,7 @@ export const TimedComments = () => {
     return (
         <div>
             <MemoTimer 
-                startingFrom={10} 
+                startingFrom={180}
                 timerFunction={fetchComments}
                 label='Comments will refresh in: '
             />

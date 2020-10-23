@@ -8,7 +8,7 @@ import {
   setDraws,
 } from './drawsSlice';
 
-export function Draws() {    
+export const Draws = () => {    
     const draws = useSelector(selectDraws);
     const dispatch = useDispatch();
 

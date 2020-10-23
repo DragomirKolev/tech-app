@@ -6,14 +6,14 @@ import styles from './Comments.module.css';
 export const Comments = ({ selectedComments }) => {
     const comments = useSelector(selectComments);
     const isPartOfSelected = number => selectedComments.includes(number);
-    const list = renderComments(comments, isPartOfSelected, 10);
+    const list = loadComments(comments, isPartOfSelected, 10);
 
     return (
         <div className={styles.list}>{list}</div>
     );
 }
 
-const renderComments = (comments, isPartOfSelected, limit) => {
+const loadComments = (comments, isPartOfSelected, limit) => {
     return comments
         .slice(0, limit) // get only the comments that we need
         .sort((c1, c2) => c1.id - c2.id) // order them by ID
