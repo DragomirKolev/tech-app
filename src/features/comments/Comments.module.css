@@ -1,0 +1,15 @@
+.list {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.list div {
+  padding: 5px;
+  border: solid 1px black;
+}
+
+.selectedComment {
+  background-color: green;
+  font-weight: bold;
+}
+
