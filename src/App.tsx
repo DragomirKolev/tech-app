@@ -3,7 +3,7 @@ import { PlayField } from './features/playField/PlayField';
 import { Bet } from './features/bet/Bet';
 import { Draws } from './features/draws/Draws';
 import { Price } from './containers/price/Price';
-import { TimedComments } from './containers/timedComments/TimedComments';
+import { DrawTimer } from './containers/drawTimer/DrawTimer'
 import './App.css';
 
 export const App = () => {
@@ -13,7 +13,7 @@ export const App = () => {
         <Bet />
         <Draws />
         <Price />
-        <TimedComments />
+        <DrawTimer />
     </div>
   );
 }

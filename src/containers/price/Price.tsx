@@ -7,8 +7,8 @@ import { selectDraws} from '../../features/draws/drawsSlice';
 import { selectPlayFieldSelected } from '../../features/playField/playFieldSlice';
 
 export const Price = () => {    
-    const bet = useSelector(selectBet);
-    const draws = useSelector(selectDraws);
+    const bet = parseInt(useSelector(selectBet));
+    const draws = useSelector(selectDraws) || 0;
     const playfieldSelected = useSelector(selectPlayFieldSelected);
 
     const value = bet * draws * playfieldSelected.length;

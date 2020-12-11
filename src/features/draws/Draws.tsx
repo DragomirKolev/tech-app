@@ -11,10 +11,11 @@ import {
 export const Draws = () => {    
     const draws = useSelector(selectDraws);
     const dispatch = useDispatch();
+    const value = draws === null ? '' : draws.toString();
 
-    const handleChange = e => {
-        const userInput = e.target.value;
-        if (userInput === '') { dispatch(setDraws('')); return; }
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const userInput = e.currentTarget.value;
+        if (userInput === '') { dispatch(setDraws(null)); return; }
         dispatch(setDraws(Math.max(0, parseInt(userInput))));
     }
     
@@ -22,7 +23,7 @@ export const Draws = () => {
         <Input 
             label='Draws'
             type='number'
-            value={draws.toString()}
+            value={value}
             // Bonus 1 can be done using the step in input 
             step='1' // adds native browser buttons to the input (using up and down arrow keys on keyboard also works)
             handleChange={handleChange}

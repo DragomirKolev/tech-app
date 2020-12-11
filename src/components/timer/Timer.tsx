@@ -1,6 +1,8 @@
 import React, { useState, useEffect, memo } from 'react';
 
-const Timer = ({ startingFrom, timerFunction, label }) => {
+const Timer: React.FC<Props> = ({ 
+    startingFrom, timerFunction, label
+}) => {
     const [seconds, setSeconds] = useState(startingFrom || 60);
 
     useEffect(() => {
@@ -21,5 +23,11 @@ const Timer = ({ startingFrom, timerFunction, label }) => {
         <div>{label}{displayTimer}</div>
     );
 }
+
+interface Props {
+    startingFrom: number,
+    timerFunction: () => void, 
+    label: string
+};
 
 export const MemoTimer = memo(Timer);
