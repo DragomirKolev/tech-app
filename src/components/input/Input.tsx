@@ -20,7 +20,7 @@ interface Props {
     label?: string, 
     type: string, 
     value: string | number, 
-    step: string, 
+    step?: string, 
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void, 
     footer?: string,
 }

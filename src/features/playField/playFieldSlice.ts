@@ -20,10 +20,11 @@ export const playFieldSlice = createSlice({
     filter: (state, { payload }: PayloadAction<number>) => {
       state.selected = state.selected.filter(number => number !== payload)
     },
+    clear: (state) => { state.selected = [] },
   },
 });
 
-export const { push, filter } = playFieldSlice.actions;
+export const { push, filter, clear } = playFieldSlice.actions;
 
 export const selectPlayFieldSelected = (state: { playField: PlayFieldState }) => state.playField.selected;
 export const selectIsMaxReached = (state: { playField: PlayFieldState }) =>
