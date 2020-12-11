@@ -10,7 +10,7 @@ export const Bet = () => {
     const bet = useSelector(selectBet);
     const dispatch = useDispatch();
     
-    const handleChange = e => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const userInput = e.target.value;
         if (userInput === '') { dispatch(setBet('')); return; }
         
@@ -23,7 +23,7 @@ export const Bet = () => {
         dispatch(setBet(newBet));
     }
     
-    const confirmation = currencyFormatter.format(bet);
+    const confirmation = currencyFormatter.format(parseInt(bet));
 
     return (
         <Input 

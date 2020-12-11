@@ -1,4 +1,0 @@
-.inputContainer {
-  display: grid;
-  grid-template-columns: minmax(60px, 100px) minmax(300px, 700px);
-}
