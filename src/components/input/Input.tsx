@@ -20,12 +20,12 @@ interface Props {
     label?: string, 
     type: string, 
     value: string | number, 
-    step: string, 
+    step?: string, 
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void, 
-    footer?: string,
+    footer?: string | boolean | React.ReactElement,
 }
 
 const InputContainer = styled.div`
     display: grid;
-    grid-template-columns: minmax(60px, 100px) minmax(300px, 700px);
+    grid-template-columns: minmax(70px, 100px) minmax(300px, 700px);
 `
